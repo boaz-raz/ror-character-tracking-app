@@ -1,0 +1,12 @@
+<h1>Characters</h1>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li>
+      <%= link_to character.name , character %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "New Character", new_character_path %></p>
+<%= link_to "API Character", api_v1_characters_path %>

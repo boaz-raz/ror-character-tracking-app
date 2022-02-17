@@ -1,0 +1,18 @@
+<h1><%= @character.name %></h1>
+
+<p><%= @character.gender %></p>
+<p><%= @character.birthdate %></p>
+<p><%= @character.height %></p>
+<p><%= @character.weight %></p>
+<p><%= @character.home_location %></p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_character_path(@character) %></li>
+  <li><%= link_to "Destroy", character_path(@character), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+  <li><%= link_to "Home", root_path(@character) %></li>
+  <li><%= link_to "API", api_v1_character_path(@character) %></li>
+</ul>
